@@ -2,7 +2,7 @@
 
 # pve-gpg-backup.sh
 # https://github.com/PiDroid-B/pve-gpg-backup
-# Version : 1.0.0
+# Version : 1.0.1
 # Copyright 2019 PiDroid-B All rights reserved.
 # Use of this source code is governed by a GPL v3
 

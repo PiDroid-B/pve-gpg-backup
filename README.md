@@ -82,7 +82,7 @@ This project is licensed under the GPL v3 License. See the [LICENSE](https://git
 
 ## Changelog
 
-| version | tag | date | description |
+| version | release | date | description |
 |-|-|-|-|
-| 1.0.0 | x | 2019-06-29 | Init |
-
+| 1.0.0 | | 2019-06-29 | Init |
+| 1.0.1 | | 2019-06-30 | Remove unsed variables |
