@@ -42,7 +42,7 @@
 #----------------------------
 
 # name of your key gpg
-GPG_KEYNAME="serv1pve-backup"
+GPG_KEYNAME="your_key"
 
 # target folder for encrypted backup (original backups still in $DUMPDIR)
 STOCKAGE_DST="/mnt/pve/yourpath/"
