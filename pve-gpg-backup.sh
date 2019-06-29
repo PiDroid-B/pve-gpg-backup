@@ -77,15 +77,11 @@ VMID="$3"
 [[ ! "$NB_MAX_FULL" =~ ^[0-9]+$ ]] && echo "${TAG_LOG} - ERROR : NB_MAX_FULL is not a number [$NB_MAX_FULL]" && exit 1
 [[ ! "$NB_MAX_DIFF" =~ ^[0-9]+$ ]] && echo "${TAG_LOG} - ERROR : NB_MAX_DIFF is not a number [$NB_MAX_DIFF]" && exit 1
 
-[[ "$NO_DELETE" == "0" ]] && RM_CMD="rm -v" || RM_CMD="echo"
-
 if [ "${PHASE}" == "backup-end" ]; then
 	echo "${TAG_LOG} - ${HOSTNAME}"
 	echo "${TAG_LOG} - Retention : full(max:${NB_MAX_FULL}) and diff(max:${NB_MAX_DIFF})"
 	# init variables
-	DIR="$(dirname $TARFILE)/"
-	FILE="$(basename $TARFILE)"
-	EXT="${TARFILE##*.}"
+	FILE="$(basename "$TARFILE")"
 	FILENAME="${FILE%.*}"
 	PROXMOX="$(cat /etc/hostname)"
 	BACKUP_DATE="$( echo "${FILENAME}" | awk -F'[-_.]' '{ print $4$5$6"-"$7$8$9 }' )"
